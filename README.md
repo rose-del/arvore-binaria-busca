@@ -1,6 +1,6 @@
-# Árvore Binária de Pesquisa
+# Árvore Binária de Busca
 
-Este projeto implementa uma **Árvore Binária de Busca (Binary Search Tree - BST)** em Java, contendo as principais operações fundamentais da estrutura.
+Este projeto implementa uma **Árvore Binária de Busca** em Java, contendo as principais operações fundamentais da estrutura.
 
 ## Sobre o projeto
 
