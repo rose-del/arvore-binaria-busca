@@ -13,9 +13,16 @@ public class Main {
         System.out.println(arv.buscar(23));
         System.out.println(arv.buscar(99));
 
-        arv.remover(12);
-        arv.remover(76);
+        //arv.remover(12);
+        //arv.remover(76);
 
+        System.out.println("Pré-ordem:");
+        arv.preOrdem();
+
+        System.out.println("Em-ordem:");
         arv.emOrdem();
+
+        System.out.println("Pós-ordem:");
+        arv.posOrdem();
     }
 }

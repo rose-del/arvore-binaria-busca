@@ -104,4 +104,32 @@ public class Arvore {
             emOrdemRec(nodo.direita);
         }
     }
+
+    public void preOrdem() {
+        preOrdemRec(raiz);
+        System.out.println();
+    }
+
+    private void preOrdemRec(Nodo nodo) {
+        if (nodo != null) {
+            System.out.println(nodo.valor + " ");
+            preOrdemRec(nodo.esquerda);
+            preOrdemRec(nodo.direita);
+        }
+    }
+
+    public void posOrdem() {
+        posOrdemRec(raiz);
+        System.out.println();
+    }
+
+    private void posOrdemRec(Nodo nodo) {
+        if (nodo != null) {
+
+            posOrdemRec(nodo.esquerda);
+            posOrdemRec(nodo.direita);
+
+            System.out.print(nodo.valor + " ");
+        }
+    }
 }
