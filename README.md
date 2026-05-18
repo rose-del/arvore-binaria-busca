@@ -1,73 +1,74 @@
-# Árvore Binária de Busca
+# O que é “percorrer uma árvore”?
 
-Este projeto implementa uma **Árvore Binária de Busca** em Java, contendo as principais operações fundamentais da estrutura.
+Percorrer significa **visitar todos os nodos** da árvore em uma determinada ordem.
 
-## Sobre o projeto
+Os 3 tipos principais são:
 
-A **Árvore Binária de Busca** é uma estrutura de dados onde:
+1. Pré-ordem
+2. Em-ordem
+3. Pós-ordem
 
-* Cada nodo possui no máximo dois filhos
-* Valores menores ficam à **esquerda**
-* Valores maiores ficam à **direita**
+A diferença entre eles é:
 
-Essa organização permite buscas eficientes.
+> QUANDO a raiz é visitada.
 
-## Regras
+Os slides mostram isso: 
 
-Para qualquer nodo:
+* Pré-ordem → raiz antes
+* Em-ordem → raiz no meio
+* Pós-ordem → raiz depois
 
+# MINHA ÁRVORE
+
+Com os valores:
+
+```java
+int[] valores = {50, 17, 72, 12, 23, 54, 76, 9, 14};
 ```
-Esquerda < Raiz < Direita
+
+Sua árvore fica assim:
+
+```text
+          50
+        /    \
+      17      72
+     /  \    /  \
+   12   23 54   76
+  /  \
+ 9   14
 ```
 
-## Inserção
+# Resultado esperado
 
-* Começa pela raiz
-* Compara o valor:
+```text
+Pré-ordem:
+50 17 12 9 14 23 72 54 76
 
-  * Menor → esquerda
-  * Maior → direita
-* Insere quando encontra uma posição `null`
+Em-ordem:
+9 12 14 17 23 50 54 72 76
 
-## Busca
+Pós-ordem:
+9 14 12 23 17 54 76 72 50
+```
 
-* Segue a mesma lógica da inserção
-* Retorna:
+# Para memorizar
 
-  * `true` → se encontrou
-  * `false` → se não existe
+## Pré
 
-## Remoção
+```text
+RAIZ primeiro
+```
 
-A operação mais importante e complexa. Possui 3 casos:
+## Em
 
-### 1. Nodo folha
+```text
+RAIZ no meio
+```
 
-Remove diretamente.
+## Pós
 
-### 2. Nodo com 1 filho
+```text
+RAIZ por último
+```
 
-Substitui pelo filho.
-
-### 3. Nodo com 2 filhos
-
-* Encontra o **sucessor** (menor valor da subárvore direita)
-* Copia o valor
-* Remove o sucessor
-
-
-### Classes
-
-* **Nodo** → representa cada elemento da árvore
-* **Arvore** → contém a lógica da estrutura
-* **Main** → execução e testes
-
-## Complexidade
-
-| Operação | Complexidade Média | Pior Caso |
-| -------- | ------------------ | --------- |
-| Inserir  | O(log n)           | O(n)      |
-| Buscar   | O(log n)           | O(n)      |
-| Remover  | O(log n)           | O(n)      |
-
-O pior caso ocorre quando a árvore fica desbalanceada (parecendo uma lista).
+Essa é a essência dos 3 percursos.
