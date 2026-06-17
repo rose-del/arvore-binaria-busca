@@ -1,13 +1,13 @@
 public class Nodo {
-    int[] chaves;
-    Nodo[] filhos;
-    int numChaves;
-    boolean folha;
+    int valor;
+    Nodo esquerda;
+    Nodo direita;
+    Nodo pai; 
 
-    public Nodo(int ordem) {
-        this.chaves    = new int[ordem - 1];
-        this.filhos    = new Nodo[ordem];
-        this.numChaves = 0;
-        this.folha     = true;
+    public Nodo(int valor) {
+        this.valor = valor;
+        this.esquerda = null;
+        this.direita = null;
+        this.pai = null; 
     }
 }
